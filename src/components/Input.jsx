@@ -1,41 +1,14 @@
-export default function Input({
-  label,
-  id,
-  type = 'text',
-  placeholder,
-  value,
-  onChange,
-  error,
-  required = false,
-  className = '',
-  autoComplete,
-}) {
+export default function Input({ label, error, ...props }) {
   return (
-    <div className={`flex flex-col gap-1.5 ${className}`}>
-      {label && (
-        <label htmlFor={id} className="text-white/70 text-xs font-bold tracking-widest uppercase">
-          {label}
-          {required && <span className="text-yellow-400 ml-1">*</span>}
-        </label>
-      )}
+    <div className="mb-4 flex flex-col gap-1.5">
+      <label className="text-[10px] font-black uppercase tracking-widest text-black/40 ml-1">{label}</label>
       <input
-        id={id}
-        type={type}
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-        required={required}
-        autoComplete={autoComplete}
-        className={`
-          bg-white/5 border text-white placeholder-white/20 text-sm px-4 py-3
-          focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent
-          transition-all duration-200
-          ${error ? 'border-red-500' : 'border-white/15 hover:border-white/30'}
-        `}
+        {...props}
+        className={`w-full border-2 rounded-[16px] px-5 py-3 font-bold text-sm outline-none transition-all ${
+          error ? 'border-[#EF4444]' : 'border-black focus:bg-[#F5F216]/5'
+        }`}
       />
-      {error && (
-        <p className="text-red-400 text-xs mt-0.5">{error}</p>
-      )}
+      {error && <span className="text-[9px] font-bold text-[#EF4444] uppercase px-1">{error}</span>}
     </div>
-  )
+  );
 }
