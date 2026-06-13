@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom'
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
-  const isAuthPage = location.pathname === '/login' || location.pathname === '/signup'
+  const isAuthPage = location.pathname === '/auth/login' || location.pathname === '/auth/signup'
 
   // Added font-sans to strictly enforce the MEIRO typeface from your tailwind config
   return (
@@ -62,14 +62,14 @@ export default function Navbar() {
             <div className="hidden md:flex items-center gap-3">
               {/* Ghost to Primary hover - Matches Join Now style on hover */}
               <Link
-                to="/login"
+                to="/auth/login"
                 className="text-hadei-black bg-transparent text-sm font-bold px-5 py-2.5 rounded-md transition-all duration-300 ease-in-out hover:bg-hadei-yellow hover:shadow-md hover:-translate-y-0.5"
               >
                 Log In
               </Link>
               {/* Primary Button - Default yellow, subtle hover lift */}
               <Link
-                to="/signup"
+                to="/auth/signup"
                 className="bg-hadei-yellow text-hadei-black text-sm font-bold rounded-md px-5 py-2.5 transition-all duration-300 ease-in-out hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:shadow-none"
               >
                 Join Now
@@ -120,14 +120,14 @@ export default function Navbar() {
           {!isAuthPage && (
             <div className="bg-surface-light p-6 flex flex-col gap-4">
               <Link 
-                to="/login" 
+                to="/auth/login" 
                 className="text-hadei-black bg-transparent text-center text-base font-bold py-3 rounded-md transition-all duration-300 hover:bg-hadei-yellow shadow-sm" 
                 onClick={() => setMenuOpen(false)}
               >
                 Log In
               </Link>
               <Link 
-                to="/signup" 
+                to="/auth/signup" 
                 className="bg-hadei-yellow text-hadei-black text-center text-base font-bold py-3 rounded-md shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg active:translate-y-0" 
                 onClick={() => setMenuOpen(false)}
               >

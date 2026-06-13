@@ -55,7 +55,7 @@ export default function SignupPage() {
     if (role === 'client') {
       navigate('/client/onboarding'); 
     } else {
-      navigate('/login');
+      navigate('/auth/login');
     }
   };
 
@@ -65,7 +65,7 @@ export default function SignupPage() {
       description="A managed talent network built for all creative professionals. Whether you are a designer, developer, or visual storyteller, Hadei provides a secure workspace built on trust and reliability."
       footerText="Already a member?" 
       footerLinkLabel="Sign in" 
-      footerLinkTo="/login"
+      footerLinkTo="/auth/login"
     >
       <form onSubmit={handleSignup} className="space-y-3">
         <Alert type={alert?.type} message={alert?.message} />

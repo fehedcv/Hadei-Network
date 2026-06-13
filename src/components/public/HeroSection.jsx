@@ -33,14 +33,14 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
               {/* Primary Button */}
               <Link 
-                to="/signup" 
+                to="/auth/signup" 
                 className="w-full sm:w-auto text-center bg-hadei-yellow text-hadei-black text-base font-bold px-8 py-4 rounded-md transition-all duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1 active:translate-y-0 active:shadow-none"
               >
                 Hire Freelancers
               </Link>
               {/* Secondary Button */}
               <Link 
-                to="/signup" 
+                to="/auth/signup" 
                 className="w-full sm:w-auto text-center bg-hadei-black text-hadei-white text-base font-bold px-8 py-4 rounded-md transition-all duration-300 ease-in-out hover:bg-hadei-white hover:text-hadei-black border-2 border-hadei-black"
               >
                 Apply as Freelancer

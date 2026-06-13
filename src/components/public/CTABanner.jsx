@@ -31,7 +31,7 @@ export default function CTABanner() {
               Used as the primary action here for maximum contrast against the yellow background.
             */}
             <Link 
-              to="/signup"
+              to="/auth/signup"
               className="w-full text-center bg-hadei-black text-hadei-white text-base font-bold px-8 py-4 border-2 border-hadei-black rounded-md transition-all duration-300 hover:bg-surface-light hover:text-hadei-black hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 active:translate-y-0 active:shadow-none"
             >
               Apply to the Network
@@ -39,7 +39,7 @@ export default function CTABanner() {
             
             {/* Ghost Button Styling - Transparent background, structural border */}
             <Link 
-              to="/login"
+              to="/auth/login"
               className="w-full text-center bg-transparent text-hadei-black text-base font-bold px-8 py-4 border-2 border-hadei-black rounded-md transition-all duration-300 hover:bg-hadei-white hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 active:translate-y-0 active:shadow-none"
             >
               Log in to account

@@ -67,7 +67,7 @@ export default function LoginPage() {
       } else if (userRole === 'client') {
         navigate('/dashboard/client');
       } else {
-        navigate('/dashboard/freelancer');
+        navigate('/freelancer/dashboard/home');
       }
     }
   };
@@ -77,7 +77,7 @@ export default function LoginPage() {
       heading="Welcome back!"
       footerText="Not a member?"
       footerLinkLabel="Register now"
-      footerLinkTo="/signup"
+      footerLinkTo="/auth/signup"
     >
       <form onSubmit={handleSubmit} className="space-y-4">
         <Alert type={alert?.type} message={alert?.message} />

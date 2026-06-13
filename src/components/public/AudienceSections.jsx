@@ -57,7 +57,7 @@ export default function AudienceSections() {
               
               <div className="mt-12">
                 <Link 
-                  to="/signup"
+                  to="/auth/signup"
                   className="inline-block bg-hadei-yellow text-hadei-black text-base font-bold px-8 py-4 border-2 border-hadei-black rounded-md shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 hover:-translate-y-1 hover:shadow-none active:translate-y-0"
                 >
                   Apply as Talent
@@ -153,7 +153,7 @@ export default function AudienceSections() {
               
               <div className="mt-12">
                 <Link 
-                  to="/signup"
+                  to="/auth/signup"
                   className="inline-block bg-hadei-black text-hadei-white text-base font-bold px-8 py-4 border-2 border-hadei-black rounded-md transition-all duration-300 hover:bg-hadei-white hover:text-hadei-black hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-y-1 active:shadow-none"
                 >
                   Start Hiring
